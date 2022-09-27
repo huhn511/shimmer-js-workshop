@@ -7,15 +7,9 @@
      try {
          const manager = await getUnlockedManager();
  
-         const account = await manager.getAccount('0');
-         console.log('Account:', account);
+         const account = await manager.getAccount('Alice');
+         console.log('Address:', account?.meta?.publicAddresses);
  
-         const address = await account.generateAddress();
-         console.log('New address:', address);
- 
-         // It's also possible to generate multiple addresses
-         // const addresses = await account.generateAddresses(2);
-         // console.log('New addresses:', addresses);
  
          // Use the Faucet to send testnet tokens to your address:
          console.log("Fill your address with the Faucet:  https://faucet.testnet.shimmer.network")

@@ -10,7 +10,7 @@
          const manager = await createAccountManager();
  
          const account = await manager.createAccount({
-             alias: 'Test 2',
+             alias: 'Alice',
          });
          console.log('Account created:', account);
  
@@ -22,7 +22,7 @@
  
  async function createAccountManager() {
      const accountManagerOptions = {
-         storagePath: './database',
+         storagePath: './alice-database',
          clientOptions: {
              nodes: ['https://api.testnet.shimmer.network'],
              localPow: true,

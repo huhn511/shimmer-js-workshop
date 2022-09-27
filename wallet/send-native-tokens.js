@@ -7,14 +7,14 @@
      try {
          const manager = await getUnlockedManager();
  
-         const account = await manager.getAccount('0');
+         const account = await manager.getAccount('Alice');
  
          await account.sync();
  
          // Get a tokenId from your account balance after running example
          // 22-mint-native-tokens.js
          let tokenId =
-             '0x08e2d0756ea6232a1ce3961a0ed127aaf657fc795fe4c43779bf52f87ce65568730100000000';
+             '0x08a39354f7005bd7cf57307aa873acbd83ad653952bc54fa2aeac98c167856daab0100000000';
          // `100` hex encoded
          let tokenAmount = "0x64"
  
@@ -24,7 +24,7 @@
          const response = await account.sendNativeTokens([
              {
                  //TODO: Replace with the address of your choice!
-                 address: 'rms1qprw9ne04m4eh9pa3k8r3vhy2r8l3830n6kgergvy2pw9le8kv4sw38hgud',
+                 address: 'rms1qz5rxgrtu7a4f973uu3kv3qt2zage2waehgkc80z9ksp44lk0yckk7yfjd2',
                  nativeTokens: [[tokenId, tokenAmount]],
              }
          ]);
@@ -32,7 +32,7 @@
          console.log(response);
  
          console.log(
-             `Check your block on http://localhost:14265/api/core/v2/blocks/${response.blockId}`,
+             `Check your block on https://explorer.shimmer.network/testnet/block/${response.blockId}`,
          );
      } catch (error) {
          console.log('Error: ', error);

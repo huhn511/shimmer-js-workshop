@@ -7,7 +7,7 @@
  async function run() {
      try {
          const manager = await getUnlockedManager();
-         const account = await manager.getAccount('Test 2');
+         const account = await manager.getAccount('Alice');
          //const addressObject = await account.addresses();
          //console.log('Addresses before:', addressObject);
  

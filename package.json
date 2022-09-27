@@ -11,6 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "@iota/iota.js": "^2.0.0-rc.1",
+    "@iota/pow-neon.js": "^1.8.6",
+    "@iota/util.js": "^1.8.6",
     "@iota/wallet": "^2.0.2-alpha.28",
     "bip39": "^3.0.4",
     "dotenv": "^16.0.2"
